@@ -1,70 +1,76 @@
-# Getting Started with Create React App
+# Project Title: React Products Showcase
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Product Showcase_Screenshot](<images/Screenshot (1180).png>)
+![Pagination_Screenshot](<images/Screenshot (1181).png>)
+![Category Filtering_Screenshot](<images/Screenshot (1182).png>)
 
-## Available Scripts
+# Description
+This project is a simple React application that fetches product data from an external API and displays them with category filtering and pagination features. Users can filter products by category, search for specific items, and navigate through pages to view more products. The application is built using React functional components, Redux for state management, and react-router for navigation.
 
-In the project directory, you can run:
+# Features
+1. Fetches product data from DummyJSON API.
+2. Displays product categories with single selection filtering.
+3. Shows paginated products based on selected category or all products if none selected.
+4. Allows searching through products by title.
+5. Utilizes Redux for state management of categories, products, and pagination.
+6. Stores selected category and search queries in the URL query parameters.
 
-### `npm start`
+# Technologies Used
+1. React (Functional Components)
+2. Redux (State Management)
+3. React Router
+4. Fetch API
+5. CSS for styling
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Installation
+1. Clone the repository:
+git clone https://github.com/your-username/react-products-showcase.git
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. Navigate to the project directory:
+cd react-products-showcase
 
-### `npm test`
+3. Install dependencies:
+npm install
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+4. Start the development server:
+npm start
 
-### `npm run build`
+5. Open the application in your browser:
+http://localhost:3000
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Project Structure
+/src
+│
+├── /components
+│   ├── CategoryList.js         # Category filter list
+│   ├── ProductList.js          # Product display with pagination
+│   ├── SearchBar.js            # Search component
+│   └── PaginationLoader.js     # Pagination controls
+│
+├── /redux
+│   ├── store.js                # Redux store configuration
+│   ├── categorySlice.js        # Category filter slice
+│   └── productsSlice.js        # Products data slice with pagination
+│
+├── App.js                      # Main component to display products
+├── App.css                     # Styling for the app
+└── index.js                    # Application entry point
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# How it Works
+1. Category Selection: Users can select a category to filter the products. The selected category is stored in the query parameters and handled by Redux.
+2. Pagination: Products are paginated, and users can navigate through pages using the pagination component.
+3. Search Functionality: Users can search for specific products using the search bar. The search term is also stored in the URL query parameters.
+4. State Management: Redux handles the state of products, pagination, and category filtering, ensuring a smooth user experience.
+API Used
+5. This project fetches product data from the DummyJSON Products API.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Required Dependencies
+1. React
+2. Redux
+3. React-Redux
+4. Redux Toolkit
+5. React Router DOM
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Commands to Run
+npm start: Starts the development server.
+npm build: Builds the project for production.
